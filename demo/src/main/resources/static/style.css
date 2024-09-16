@@ -1,0 +1,6 @@
+
+body { font-family: Arial, sans-serif; }
+#chat { width: 50%; margin: 0 auto; }
+#messages { border: 1px solid #ccc; height: 300px; overflow-y: scroll; margin-bottom: 10px; padding: 10px; }
+#message-input { width: 100%; padding: 10px; }
+#user-list { margin-top: 20px; }

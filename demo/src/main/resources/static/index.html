@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="chat">
+    <h1>Simple Private Chat</h1>
+
+    <!-- User Login -->
+    <div id="login">
+        <label>Enter your name:</label>
+        <input type="text" id="username" />
+        <button onclick="connect()">Connect</button>
+    </div>
+
+    <!-- Chat Section -->
+    <div id="chat-room" style="display:none;">
+        <div id="messages"></div>
+
+        <input type="text" id="message-input" placeholder="Enter your message here..." />
+        <button onclick="sendMessage()">Send</button>
+
+        <div id="user-list">
+            <h3>Choose a user to chat with:</h3>
+            <ul>
+                <!-- List of hardcoded users for POC -->
+                <li onclick="setReceiver('bob')">Bob</li>
+                <li onclick="setReceiver('charlie')">Charlie</li>
+                <li onclick="setReceiver('dave')">Dave</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.2/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
